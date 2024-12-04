@@ -33,22 +33,17 @@ app.use("/", api);
 
 let ingestionStatus = [];
 
-// API to trigger ingestion
-app.post('/api/trigger-ingestion', (req, res) => {
-    const ingestionId = new Date().getTime(); // Example ID
-    ingestionStatus.push({ id: ingestionId, status: 'In Progress', startTime: new Date() });
-    // Simulate processing
-    setTimeout(() => {
-        const index = ingestionStatus.findIndex((i) => i.id === ingestionId);
-        if (index !== -1) ingestionStatus[index].status = 'Completed';
-    }, 10000); // Example 10-second processing delay
-    res.status(200).send({ message: 'Ingestion started', id: ingestionId });
-});
-
-// API to fetch ingestion status
-app.get('/api/ingestion-status', (req, res) => {
-    res.status(200).send(ingestionStatus);
-});
+// // API to trigger ingestion
+// app.post('/api/trigger-ingestion', (req, res) => {
+//     const ingestionId = new Date().getTime(); // Example ID
+//     ingestionStatus.push({ id: ingestionId, status: 'In Progress', startTime: new Date() });
+//     // Simulate processing
+//     setTimeout(() => {
+//         const index = ingestionStatus.findIndex((i) => i.id === ingestionId);
+//         if (index !== -1) ingestionStatus[index].status = 'Completed';
+//     }, 10000); // Example 10-second processing delay
+//     res.status(200).send({ message: 'Ingestion started', id: ingestionId });
+// });
 
 app.listen(PORT, () => {
   console.log("Server running on Port no: ", PORT);
