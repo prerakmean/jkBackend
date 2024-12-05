@@ -36,6 +36,10 @@ module.exports = {
     status: 400,
     message: "Something went wrong while adding a Ingestion",
   },
-  TASK_NOT_UPDATE: { status: 403, message: "Task Not Update!" },
-  NO_TASK_FOUND: { status: 403, message: "No Task Found For Task ID" },
+  QUESTION_SAVE_FAILED: {
+    Save: "Failed",
+    status: 400,
+    message: "Something went wrong while adding a Question",
+  },
+
 };

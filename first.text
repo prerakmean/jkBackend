@@ -1,3 +1,5 @@
+   1. run curl request in postman for Admin Register
+
 curl 'http://localhost:4000/api/signup' \
   -H 'Accept: application/json, text/plain, */*' \
   -H 'Accept-Language: en-US,en;q=0.9' \
@@ -13,3 +15,71 @@ curl 'http://localhost:4000/api/signup' \
   -H 'sec-ch-ua-mobile: ?0' \
   -H 'sec-ch-ua-platform: "Linux"' \
   --data-raw '{"email":"admin@gmail.com","password":"admin@123A","username":"Admin"}'
+
+
+
+
+2.run below 3  curl request in postman for q&A insert in DB
+
+
+  curl --location 'http://localhost:4000/api/addQuestionWithAnswer' \
+--header 'Accept: application/json, text/plain, */*' \
+--header 'Accept-Language: en-US,en;q=0.9' \
+--header 'Connection: keep-alive' \
+--header 'Content-Type: application/json' \
+--header 'Origin: http://localhost:4100' \
+--header 'Referer: http://localhost:4100/' \
+--header 'Sec-Fetch-Dest: empty' \
+--header 'Sec-Fetch-Mode: cors' \
+--header 'Sec-Fetch-Site: same-site' \
+--header 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' \
+--header 'sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"' \
+--header 'sec-ch-ua-mobile: ?0' \
+--header 'sec-ch-ua-platform: "Linux"' \
+--header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY3NGViMjJlZTY5ZDM2ZTRkOTgzOTU4MyIsImlhdCI6MTczMzM5ODg3MX0.7IyQs4rxXUejfBvKaXkn23-rJUr-XOkMIR6gPGMfVkw' \
+--header 'user_id: a31b1470-b147-11ef-a974-719f3089eb63' \
+--data '{"question":"Would you like to request a refund or replacement","answer":"I’d prefer a refund/replacement for the item."}'
+
+
+
+
+  curl --location 'http://localhost:4000/api/addQuestionWithAnswer' \
+--header 'Accept: application/json, text/plain, */*' \
+--header 'Accept-Language: en-US,en;q=0.9' \
+--header 'Connection: keep-alive' \
+--header 'Content-Type: application/json' \
+--header 'Origin: http://localhost:4100' \
+--header 'Referer: http://localhost:4100/' \
+--header 'Sec-Fetch-Dest: empty' \
+--header 'Sec-Fetch-Mode: cors' \
+--header 'Sec-Fetch-Site: same-site' \
+--header 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' \
+--header 'sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"' \
+--header 'sec-ch-ua-mobile: ?0' \
+--header 'sec-ch-ua-platform: "Linux"' \
+--header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY3NGViMjJlZTY5ZDM2ZTRkOTgzOTU4MyIsImlhdCI6MTczMzM5ODg3MX0.7IyQs4rxXUejfBvKaXkn23-rJUr-XOkMIR6gPGMfVkw' \
+--header 'user_id: a31b1470-b147-11ef-a974-719f3089eb63' \
+--data ' {"question":"May I know your full name and contact number for verification?","answer":"My name is JK TECH, and my contact number is XXXXXXXXXX."}'
+
+
+
+
+  curl --location 'http://localhost:4000/api/addQuestionWithAnswer' \
+--header 'Accept: application/json, text/plain, */*' \
+--header 'Accept-Language: en-US,en;q=0.9' \
+--header 'Connection: keep-alive' \
+--header 'Content-Type: application/json' \
+--header 'Origin: http://localhost:4100' \
+--header 'Referer: http://localhost:4100/' \
+--header 'Sec-Fetch-Dest: empty' \
+--header 'Sec-Fetch-Mode: cors' \
+--header 'Sec-Fetch-Site: same-site' \
+--header 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' \
+--header 'sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"' \
+--header 'sec-ch-ua-mobile: ?0' \
+--header 'sec-ch-ua-platform: "Linux"' \
+--header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjY3NGViMjJlZTY5ZDM2ZTRkOTgzOTU4MyIsImlhdCI6MTczMzM5ODg3MX0.7IyQs4rxXUejfBvKaXkn23-rJUr-XOkMIR6gPGMfVkw' \
+--header 'user_id: a31b1470-b147-11ef-a974-719f3089eb63' \
+--data '  {"question":"Have you received your order","answer":"No, I haven’t received it yet, and it’s past the estimated delivery date"}'
+
+
